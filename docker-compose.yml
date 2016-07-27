@@ -1,0 +1,10 @@
+version: '2'
+services:
+  docker-nginx:
+    build: .
+    ports:
+    - "80:80"
+    volumes:
+     - ./supervisor:/supervisor
+     - ./nginx:/nginx
+     - ./www:/www
